@@ -10,7 +10,6 @@
 
 
 
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero suscipit soluta exercitationem numquam excepturi fuga architecto quos itaque. Voluptate nulla quasi, autem dolorum mollitia tempora. Magnam commodi eos ad voluptates!</p>
 
   <!-- Site footer -->
   <footer class="site-footer">
