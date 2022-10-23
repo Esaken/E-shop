@@ -82,7 +82,7 @@
     </div>
 
   </div>
-  <div class="col-md-2 bg-secondary p-0 mr-10px">
+  <div class="col-md-2 bg-secondary p-0">
     <!-- Side nav -->
     <!-- brand to be displayed -->
     <ul class="navbar-nav me-auto text-center">
