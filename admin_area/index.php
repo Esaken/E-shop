@@ -8,6 +8,9 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+       <!-- Font-awesome link -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./admin-style.css">
     <title>Admin dashboard</title>
   </head>
@@ -47,9 +50,9 @@
             <div class="button text-center">
                 <button class="my-3"><a href="" class="nav-link text-light bg-info my-1">Insert Products</a></button>
                 <button><a href="" class="nav-link text-light bg-info my-1">View Products</a></button>
-                <button><a href="insert_categories.php" class="nav-link text-light bg-info my-1">Insert Categories</a></button>
+                <button><a href="index.php?insert_category" class="nav-link text-light bg-info my-1">Insert Categories</a></button>
                 <button><a href="" class="nav-link text-light bg-info my-1">View Categories</a></button>
-                <button><a href="" class="nav-link text-light bg-info my-1">Insert Brands</a></button>
+                <button><a href="index.php?insert_brand" class="nav-link text-light bg-info my-1">Insert Brands</a></button>
                 <button><a href="" class="nav-link text-light bg-info my-1">View Brands</a></button>
                 <button><a href="" class="nav-link text-light bg-info my-1">All Orders</a></button>
                 <button><a href="" class="nav-link text-light bg-info my-1">All Payments</a></button>
@@ -60,7 +63,19 @@
     </div>
 
 
+   
 
+    <!-- fourth child -->
+    <div class="container my-5">
+        <?php
+        if(isset($_GET['insert_category'])){
+            include('insert_categories.php');
+        }
+        if(isset($_GET['insert_brand'])){
+            include('insert_brands.php');
+        }
+        ?>
+    </div>
 
 
   
