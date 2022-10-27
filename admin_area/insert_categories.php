@@ -1,16 +1,10 @@
 <?php
 include('../includes/connect.php');
-if(isset($_POST['insert_cat'])){
-    $category_title=$_POST['cat_title]'];
-    $insert_query="insert into 'categories' (category_title) values('$category_title')";
-    $result=mysqli_query($con, $insert_query);
-    if($result){
-        echo "<script>alert('Category has been inserted successfully')</script>";
-    }
+
+$sql = "INSERT INTO categories(category_id, category_title)
+values(' ' , 'Fruit')";
 
 
-
-}
 ?>
 
 <form action="" method="post" class="mb-2">
@@ -18,7 +12,7 @@ if(isset($_POST['insert_cat'])){
         <span class="input-group-text bg-info" id="basic-addon1">
             <i class="fa-solid fa-receipt"></i>
         </span>
-        <input type="text" class="form-control" name="cat_title" placeholder="insert categories" aria-label="username" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" name="cat_title" placeholder="insert categories" aria-label="Categories" aria-describedby="basic-addon1">
     </div>
 
 
