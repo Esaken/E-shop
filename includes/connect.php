@@ -1,8 +1,10 @@
 
 <?php
-    mysqli_connect("localhost", "root", "", "mystore");
+   $con = mysqli_connect('localhost', 'root', '', 'mystore');
  
-    if(mysqli_connect_error())
-        echo "Connection Error.";
-   
+if($con == True){
+    echo "Connection Successful";
+}else{
+    die(mysqli_error($con));
+}
 ?>

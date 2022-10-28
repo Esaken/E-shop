@@ -1,13 +1,28 @@
 <?php
 include('../includes/connect.php');
 
-$sql = "INSERT INTO categories(category_id, category_title)
-values(' ' , 'Fruit')";
+if(isset($_POST['insert_cat'])){
+    $category_title = $_POST['cat_title'];
 
+    //select data from database
+    $select_query = "SELECT * FROM 'categories' WHERE category_title = '$category_title'";
+    $result_select = mysqli_query($con,$select_query);
+    $number = mysqli_num_rows($result_select);
+    if($number>0){
+        echo "<script>alert('This category is present inside the Database')</script>";
+    }else{
+
+        $insert_query = "INSERT INTO 'categories'('category_title') VALUES ('$category_title')";
+        $result = mysqli_query($con,$insert_query);
+        if($result){
+            echo "<script>alert('Category has been inserted Successfully ..')</script>";
+        }
+    }
+}
 
 ?>
 
-<form action="" method="post" class="mb-2">
+<form action=" " method="post" class="mb-2">
     <div class="input-group w-90 mb-2">
         <span class="input-group-text bg-info" id="basic-addon1">
             <i class="fa-solid fa-receipt"></i>
