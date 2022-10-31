@@ -10,15 +10,20 @@
     <meta name="generator" content="Hugo 0.101.0">
     <title>Signin Template · Bootstrap v5.2</title>
 
+
+
+
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <!-- Font-awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
 
-    
-
-    
-
-<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sign.css">
 
     <style>
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -69,6 +74,8 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+
+
     </style>
 
     
@@ -80,7 +87,7 @@
 <main class="form-signin w-100 m-auto">
   <form>
     <img class="mb-4" src="####" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <h1 class="h3 mb-3 fw-normal text-white">Please sign in</h1>
 
     <div class="form-floating">
       <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
@@ -92,11 +99,18 @@
     </div>
 
     <div class="checkbox mb-3">
-      <label>
+      <label class="text-white">
         <input type="checkbox" value="remember-me"> Remember me
       </label>
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+
+
+     <!-- card-footer -->
+     <div class="card-footer text-center text-white-50">
+        <p>Don't have an account?<a href="./sign-up.php" class="">Sign in</a></p>
+        
+        </div>
     <p class="mt-5 mb-3 text-muted">&copy; Esau-2022</p>
   </form>
 </main>
