@@ -1,5 +1,7 @@
 <?php
+include('../includes/connect.php');
 ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -79,22 +81,31 @@
     </style>
 
     
-    <!-- Custom styles for this template -->
-    <link href="../css/signin.css" rel="stylesheet">
+  
   </head>
-  <body class="text-center">
+  <body class="text-center card">
     
 <main class="form-signin w-100 m-auto">
-  <form>
-    <img class="mb-4" src="####" alt="" width="72" height="57">
+  <form action="" method="POST">
+    <!-- <img class="mb-4" src="####" alt="" width="72" height="57"> -->
     <h1 class="h3 mb-3 fw-normal text-white">Please sign in</h1>
 
+
+
+
+
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input type="username" class="form-control" id="floatingInput" placeholder="Username" name="username">
+      <label for="floatingInput">User name</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
       <label for="floatingInput">Email address</label>
     </div>
+
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
       <label for="floatingPassword">Password</label>
     </div>
 
@@ -103,12 +114,12 @@
         <input type="checkbox" value="remember-me"> Remember me
       </label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <button class="w-100 btn btn-lg btn-primary" type="submit" name="signin" value="sign in">Sign in</button>
 
 
      <!-- card-footer -->
      <div class="card-footer text-center text-white-50">
-        <p>Don't have an account?<a href="./sign-up.php" class="">Sign in</a></p>
+        <p>Don't have an account?<a href="./sign-up.php" class="">Sign Up</a></p>
         
         </div>
     <p class="mt-5 mb-3 text-muted">&copy; Esau-2022</p>
@@ -119,3 +130,4 @@
     
   </body>
 </html>
+
